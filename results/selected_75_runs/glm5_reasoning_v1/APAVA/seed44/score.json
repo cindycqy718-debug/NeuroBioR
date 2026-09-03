@@ -1,0 +1,34 @@
+{
+  "schema_version": "neurobiots.medformer_aligned_window.score.v1",
+  "dataset": "APAVA",
+  "split": "TEST",
+  "test_only": true,
+  "formal_comparison_eligible": true,
+  "metrics": {
+    "Accuracy": 0.63382250174703,
+    "Precision": 0.763751127141569,
+    "Recall": 0.6903073286052009,
+    "F1": 0.6210214132069674,
+    "AUROC": 0.9350346527651492,
+    "AUPRC": 0.9335721099305472,
+    "PerClassAUROC": {
+      "0": 0.9350346527651492,
+      "1": 0.9350346527651492
+    },
+    "PerClassAUPRC": {
+      "0": 0.9107182204139503,
+      "1": 0.9564259994471439
+    },
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        524,
+        322
+      ]
+    ],
+    "sample_count": 1431
+  }
+}
