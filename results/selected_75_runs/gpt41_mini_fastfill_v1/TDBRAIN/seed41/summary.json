@@ -1,0 +1,63 @@
+{
+  "schema_version": "neurobiots.medformer_aligned_window.compiled_row_agent.v1",
+  "status": "complete",
+  "formal_comparison_eligible": true,
+  "dataset": "TDBRAIN",
+  "requested_model": "gpt-4.1-mini",
+  "generation_seed": 41,
+  "generation_temperature": 0.2,
+  "returned_model_ids": [
+    "gpt-4.1-mini-2025-04-14"
+  ],
+  "sample_count": 960,
+  "batch_count": 30,
+  "probability_matrix_path": "${PROJECT_ROOT}/results/medformer_aligned_compiled_row_v1_3_0_five_seed/gpt41_mini_fastfill_v1/TDBRAIN/seed41/probability_matrix.npy",
+  "predictor_audit": {
+    "source_bytes": 1774,
+    "ast_policy": "single_window_no_io_no_random_no_reflection_v1"
+  },
+  "generation_usage": {
+    "input_tokens": 5433,
+    "output_tokens": 1623,
+    "total_tokens": 7056
+  },
+  "generation_cost": {
+    "available": false,
+    "estimated_cost_rmb": null
+  },
+  "score": {
+    "schema_version": "neurobiots.medformer_aligned_window.score.v1",
+    "dataset": "TDBRAIN",
+    "split": "TEST",
+    "test_only": true,
+    "formal_comparison_eligible": true,
+    "metrics": {
+      "Accuracy": 0.5,
+      "Precision": 0.25,
+      "Recall": 0.5,
+      "F1": 0.3333333333333333,
+      "AUROC": 0.2027224392361111,
+      "AUPRC": 0.367378834302829,
+      "PerClassAUROC": {
+        "0": 0.33106119791666666,
+        "1": 0.07438368055555555
+      },
+      "PerClassAUPRC": {
+        "0": 0.4196397366525881,
+        "1": 0.31511793195307
+      },
+      "confusion": [
+        [
+          480,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "sample_count": 960
+    }
+  },
+  "elapsed_seconds": 65.87372577330098
+}
