@@ -1,0 +1,111 @@
+{
+  "schema_version": "neurobiots.adftd.glm5_predictor_replay.v1",
+  "dataset": "ADFTD",
+  "split": "TEST",
+  "test_only": true,
+  "model": "GLM-5",
+  "model_tag": "glm5_reasoning_v1",
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "batch_root": "${REDACTED_ABSOLUTE_PATH}",
+  "batch_count": 115,
+  "window_count": 14648,
+  "additional_api_calls": 0,
+  "predictors_regenerated": false,
+  "all_hard_labels_exactly_equal": true,
+  "all_probabilities_exactly_equal": false,
+  "maximum_probability_difference_overall": 1.4551360416614756e-07,
+  "elapsed_seconds": 32.35899059998337,
+  "runs": [
+    {
+      "seed": 41,
+      "predictor_path": "${REDACTED_ABSOLUTE_PATH}",
+      "saved_probability_path": "${REDACTED_ABSOLUTE_PATH}",
+      "shape": [
+        14648,
+        3
+      ],
+      "max_abs_probability_difference": 1.4551360416614756e-07,
+      "mean_abs_probability_difference": 6.524838406363909e-10,
+      "probabilities_exactly_equal": false,
+      "probabilities_allclose_atol_1e_12": false,
+      "hard_label_match_count": 14648,
+      "hard_label_total": 14648,
+      "hard_labels_exactly_equal": true,
+      "elapsed_seconds": 16.89772060001269
+    },
+    {
+      "seed": 42,
+      "predictor_path": "${REDACTED_ABSOLUTE_PATH}",
+      "saved_probability_path": "${REDACTED_ABSOLUTE_PATH}",
+      "shape": [
+        14648,
+        3
+      ],
+      "max_abs_probability_difference": 2.220446049250313e-16,
+      "mean_abs_probability_difference": 1.0740860732624688e-17,
+      "probabilities_exactly_equal": false,
+      "probabilities_allclose_atol_1e_12": true,
+      "hard_label_match_count": 14648,
+      "hard_label_total": 14648,
+      "hard_labels_exactly_equal": true,
+      "elapsed_seconds": 20.98497300001327
+    },
+    {
+      "seed": 43,
+      "predictor_path": "${REDACTED_ABSOLUTE_PATH}",
+      "saved_probability_path": "${REDACTED_ABSOLUTE_PATH}",
+      "shape": [
+        14648,
+        3
+      ],
+      "max_abs_probability_difference": 1.6578183270610225e-11,
+      "mean_abs_probability_difference": 6.766287957709789e-12,
+      "probabilities_exactly_equal": false,
+      "probabilities_allclose_atol_1e_12": false,
+      "hard_label_match_count": 14648,
+      "hard_label_total": 14648,
+      "hard_labels_exactly_equal": true,
+      "elapsed_seconds": 17.94296190002933
+    },
+    {
+      "seed": 44,
+      "predictor_path": "${REDACTED_ABSOLUTE_PATH}",
+      "saved_probability_path": "${REDACTED_ABSOLUTE_PATH}",
+      "shape": [
+        14648,
+        3
+      ],
+      "max_abs_probability_difference": 3.910348439495337e-08,
+      "mean_abs_probability_difference": 5.626113615763129e-09,
+      "probabilities_exactly_equal": false,
+      "probabilities_allclose_atol_1e_12": false,
+      "hard_label_match_count": 14648,
+      "hard_label_total": 14648,
+      "hard_labels_exactly_equal": true,
+      "elapsed_seconds": 25.95842929999344
+    },
+    {
+      "seed": 45,
+      "predictor_path": "${REDACTED_ABSOLUTE_PATH}",
+      "saved_probability_path": "${REDACTED_ABSOLUTE_PATH}",
+      "shape": [
+        14648,
+        3
+      ],
+      "max_abs_probability_difference": 5.551115123125783e-17,
+      "mean_abs_probability_difference": 3.789674442330545e-21,
+      "probabilities_exactly_equal": false,
+      "probabilities_allclose_atol_1e_12": true,
+      "hard_label_match_count": 14648,
+      "hard_label_total": 14648,
+      "hard_labels_exactly_equal": true,
+      "elapsed_seconds": 31.925974900019355
+    }
+  ]
+}

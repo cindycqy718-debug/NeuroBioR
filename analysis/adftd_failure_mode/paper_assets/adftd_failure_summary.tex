@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{ADFTD failure-mode diagnostics over synthesis seeds 41--45. Metrics
+are percentages reported as mean $\pm$ sample standard deviation. Predicted
+class shares are averaged across seeds. ``Concentrated'' denotes a seed that
+assigns at least 90\% of test windows to one class.}
+\label{tab:adftd_failure_modes}
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & Accuracy & Macro Recall & Macro F1 &
+Pred. HC/FTD/AD & Concentrated & Unused class \\
+\midrule
+GPT-4.1-mini & $40.47\pm5.13$ & $33.35\pm0.05$ & $20.97\pm2.77$ &
+37.35/0.01/62.64 & 4/5 & 4/5 \\
+GPT-4o & $33.74\pm8.42$ & $32.64\pm1.34$ & $22.62\pm3.88$ &
+28.99/31.26/39.75 & 2/5 & 2/5 \\
+Qwen3-235B-A22B Thinking & $38.16\pm10.82$ & $35.35\pm2.38$ &
+$23.96\pm5.87$ & 2.86/35.06/62.08 & 2/5 & 0/5 \\
+Gemini 3 Flash Thinking & $37.57\pm7.63$ & $34.21\pm1.39$ &
+$26.31\pm3.90$ & 5.07/33.53/61.40 & 1/5 & 0/5 \\
+\textbf{GLM-5} & $\mathbf{44.56\pm0.79}$ & $\mathbf{33.79\pm0.84}$ &
+$\mathbf{22.26\pm2.32}$ & \textbf{1.82/0.28/97.90} & \textbf{5/5} &
+\textbf{4/5} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+

@@ -1,0 +1,40 @@
+You are the reasoning backbone inside a fixed medical
+time-series Agent. Compile one deterministic, zero-shot EEG source-cohort
+classifier for the APAVA research dataset.
+
+Input to your function will be exactly one independently standardized EEG
+window shaped [256,16] at 256 Hz. Closed classes: class 0 = healthy_source_cohort, class 1 = alzheimer_source_cohort.
+No training examples, validation examples, TEST samples, labels, subject IDs,
+Medformer outputs, batch statistics, external files, or network are available.
+Use medically and physiologically justified absolute within-window features
+such as band-power composition, spectral shape, temporal variability,
+complexity, and cross-channel structure. This is research source-cohort
+classification, not a clinical diagnosis.
+
+Create exactly one file: output/predictor.py. It must define
+`predict(window)`, accepting one finite NumPy array shaped [256,16]
+and returning exactly 2 finite nonnegative probabilities
+that sum to one. Apply one fixed rule to every future row. The function must
+be deterministic and stateless. It must not read or write files, inspect the
+environment, use networking, use randomness, retain history, or access more
+than the single `window` argument.
+
+Allowed imports are only numpy, scipy, scipy.signal, scipy.stats, and math.
+Do not use open/load/save/memmap/fromfile/tofile, dynamic imports, eval/exec,
+reflection, dunder access, or random functions. Keep the module concise.
+You may use helper functions and numerical constants.
+
+Axis 0 is always time and axis 1 is always channels. When using Welch,
+periodogram, FFT, filtering, entropy, correlation, or reductions, set or
+handle the time axis explicitly; for scipy.signal.welch on the original
+window, use axis=0. Never rely on a spectral function's default last axis.
+
+Use one or more <execute> blocks to write the module. Before returning the
+solution, you MUST create a deterministic synthetic finite array shaped
+[256,16], call predict on it, and assert that the returned vector has
+shape [2], is finite and nonnegative, and sums to one. Use
+Python operations inside <execute>; shell syntax such as cat, heredocs, or
+`python3 <<` is not available. Remove any temporary test artifact and do not
+create __pycache__ inside output.
+Do not create any other output file. Then return exactly
+<solution>{"status":"complete","artifact":"predictor.py"}</solution>.

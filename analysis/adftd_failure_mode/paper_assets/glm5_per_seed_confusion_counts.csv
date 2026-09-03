@@ -1,0 +1,6 @@
+seed,true_HC_pred_HC,true_HC_pred_FTD,true_HC_pred_AD,true_FTD_pred_HC,true_FTD_pred_FTD,true_FTD_pred_AD,true_AD_pred_HC,true_AD_pred_FTD,true_AD_pred_AD
+41,1,0,4983,0,0,3176,1,0,6487
+42,394,0,4590,108,0,3068,278,0,6210
+43,348,0,4636,45,0,3131,155,5,6328
+44,0,35,4949,0,28,3148,0,137,6351
+45,0,0,4984,0,0,3176,1,0,6487

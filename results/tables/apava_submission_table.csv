@@ -1,0 +1,12 @@
+Block,Model,Accuracy,Precision,Recall,F1,AUROC,AUPRC
+Published supervised reference,Transformer,76.30±4.72,77.64±5.95,73.09±5.01,73.75±5.38,72.50±6.60,73.23±7.60
+Published supervised reference,FEDformer,74.94±2.15,74.59±1.50,73.56±3.55,73.51±3.39,83.72±1.97,82.94±2.37
+Published supervised reference,Crossformer,73.77±1.95,79.29±4.36,68.86±1.70,68.93±1.85,72.39±3.33,72.05±3.65
+Published supervised reference,PatchTST,67.03±1.65,78.76±1.28,59.91±2.02,55.97±3.10,65.65±0.28,67.99±0.76
+Published supervised reference,iTransformer,74.55±1.66,74.77±2.10,71.76±1.72,72.30±1.79,85.59±1.55,84.39±1.57
+Published supervised reference,Medformer,78.74±0.64,81.11±0.84,75.40±0.66,76.31±0.71,83.20±0.91,83.66±0.92
+Agent-LLM (standard endpoint),GPT-4.1-mini,48.18±9.99,24.09±4.99,50.00±0.00,32.27±4.46,62.86±18.32,64.38±18.19
+Agent-LLM (standard endpoint),GPT-4o,52.16±14.48,42.25±23.87,51.44±16.78,44.23±19.22,51.44±16.78,53.30±11.80
+Agent-LLM (thinking-designated),Qwen3-235B-A22B Thinking 2507,80.39±7.68,83.90±4.00,83.06±6.05,80.24±7.75,96.47±0.90,96.25±0.91
+Agent-LLM (thinking-designated),Gemini 3 Flash Thinking,75.77±3.53,78.29±4.64,77.38±4.68,75.30±3.87,90.54±7.22,90.05±7.68
+Agent-LLM (thinking-designated),GLM-5,67.48±7.63,76.92±4.40,72.25±6.59,66.70±8.07,86.03±9.94,84.26±11.30

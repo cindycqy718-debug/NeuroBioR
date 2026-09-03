@@ -1,0 +1,52 @@
+{
+  "benchmark": "NeuroBioR",
+  "version": "1.1",
+  "capability": "Inference",
+  "fixed_agent": true,
+  "tested_component": "LLM backbone",
+  "split": "TEST",
+  "test_only": true,
+  "request_indices": [41, 42, 43, 44, 45],
+  "llm_training_on_benchmark": false,
+  "input_contract": {
+    "sampling_rate_hz": 256,
+    "time_points": 256,
+    "dtype": "float32",
+    "normalization": "per-window per-channel standardization with population variance"
+  },
+  "output_contract": {
+    "type": "complete probability matrix",
+    "shape": "[N,K]",
+    "finite": true,
+    "nonnegative": true,
+    "row_sum": 1.0
+  },
+  "metrics": ["Accuracy", "Precision", "Recall", "F1", "AUROC", "AUPRC"],
+  "averaging": "macro for Precision, Recall, F1, one-vs-rest AUROC, and one-vs-rest AUPRC",
+  "uncertainty": "mean and sample standard deviation across five complete retained runs",
+  "datasets": {
+    "APAVA": {
+      "task": "healthy versus Alzheimer source-cohort classification",
+      "sample_count": 1431,
+      "window_shape": [256, 16],
+      "class_names": {"0": "healthy_source_cohort", "1": "alzheimer_source_cohort"}
+    },
+    "TDBRAIN": {
+      "task": "healthy versus Parkinson source-cohort classification",
+      "sample_count": 960,
+      "window_shape": [256, 33],
+      "class_names": {"0": "healthy_source_cohort", "1": "parkinson_source_cohort"}
+    },
+    "ADFTD": {
+      "task": "healthy versus frontotemporal dementia versus Alzheimer source-cohort classification",
+      "sample_count": 14648,
+      "window_shape": [256, 19],
+      "class_names": {
+        "0": "healthy_control_source_cohort",
+        "1": "frontotemporal_dementia_source_cohort",
+        "2": "alzheimer_disease_source_cohort"
+      }
+    }
+  }
+}
+

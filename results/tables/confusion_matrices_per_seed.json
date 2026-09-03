@@ -1,0 +1,1377 @@
+[
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "APAVA",
+    "seed": 41,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        0,
+        585
+      ],
+      [
+        0,
+        846
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "APAVA",
+    "seed": 42,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        846,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "APAVA",
+    "seed": 43,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        0,
+        585
+      ],
+      [
+        0,
+        846
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "APAVA",
+    "seed": 44,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        846,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "APAVA",
+    "seed": 45,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        846,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "ADFTD",
+    "seed": 41,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        4127,
+        0,
+        857
+      ],
+      [
+        2673,
+        0,
+        503
+      ],
+      [
+        5377,
+        0,
+        1111
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "ADFTD",
+    "seed": 42,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        5,
+        0,
+        4979
+      ],
+      [
+        0,
+        0,
+        3176
+      ],
+      [
+        6,
+        0,
+        6482
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "ADFTD",
+    "seed": 43,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        4984,
+        0,
+        0
+      ],
+      [
+        3176,
+        0,
+        0
+      ],
+      [
+        6488,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "ADFTD",
+    "seed": 44,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        0,
+        0,
+        4984
+      ],
+      [
+        0,
+        0,
+        3176
+      ],
+      [
+        0,
+        0,
+        6488
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "ADFTD",
+    "seed": 45,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        200,
+        3,
+        4781
+      ],
+      [
+        82,
+        1,
+        3093
+      ],
+      [
+        240,
+        3,
+        6245
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "TDBRAIN",
+    "seed": 41,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        480,
+        0
+      ],
+      [
+        480,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "TDBRAIN",
+    "seed": 42,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        454,
+        26
+      ],
+      [
+        445,
+        35
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "TDBRAIN",
+    "seed": 43,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        480,
+        0
+      ],
+      [
+        480,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "TDBRAIN",
+    "seed": 44,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        480,
+        0
+      ],
+      [
+        480,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4.1-mini",
+    "dataset": "TDBRAIN",
+    "seed": 45,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        480,
+        0
+      ],
+      [
+        480,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "APAVA",
+    "seed": 41,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        112,
+        473
+      ],
+      [
+        293,
+        553
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "APAVA",
+    "seed": 42,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        0,
+        585
+      ],
+      [
+        135,
+        711
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "APAVA",
+    "seed": 43,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        846,
+        0
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "APAVA",
+    "seed": 44,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        582,
+        3
+      ],
+      [
+        320,
+        526
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "APAVA",
+    "seed": 45,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        111,
+        474
+      ],
+      [
+        294,
+        552
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "ADFTD",
+    "seed": 41,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        0,
+        3840,
+        1144
+      ],
+      [
+        0,
+        2078,
+        1098
+      ],
+      [
+        0,
+        4830,
+        1658
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "ADFTD",
+    "seed": 42,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        4715,
+        82,
+        187
+      ],
+      [
+        3020,
+        7,
+        149
+      ],
+      [
+        6125,
+        26,
+        337
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "ADFTD",
+    "seed": 43,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        0,
+        201,
+        4783
+      ],
+      [
+        0,
+        144,
+        3032
+      ],
+      [
+        0,
+        426,
+        6062
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "ADFTD",
+    "seed": 44,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        1343,
+        68,
+        3573
+      ],
+      [
+        748,
+        46,
+        2382
+      ],
+      [
+        1665,
+        132,
+        4691
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "ADFTD",
+    "seed": 45,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        1231,
+        3750,
+        3
+      ],
+      [
+        791,
+        2385,
+        0
+      ],
+      [
+        1597,
+        4880,
+        11
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "TDBRAIN",
+    "seed": 41,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        133,
+        347
+      ],
+      [
+        4,
+        476
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "TDBRAIN",
+    "seed": 42,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        416,
+        64
+      ],
+      [
+        277,
+        203
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "TDBRAIN",
+    "seed": 43,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        474,
+        6
+      ],
+      [
+        405,
+        75
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "TDBRAIN",
+    "seed": 44,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        0,
+        480
+      ],
+      [
+        0,
+        480
+      ]
+    ]
+  },
+  {
+    "model": "GPT-4o",
+    "dataset": "TDBRAIN",
+    "seed": 45,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        423,
+        57
+      ],
+      [
+        288,
+        192
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "APAVA",
+    "seed": 41,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        584,
+        1
+      ],
+      [
+        429,
+        417
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "APAVA",
+    "seed": 42,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        331,
+        515
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "APAVA",
+    "seed": 43,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        584,
+        1
+      ],
+      [
+        290,
+        556
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "APAVA",
+    "seed": 44,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        569,
+        16
+      ],
+      [
+        185,
+        661
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "APAVA",
+    "seed": 45,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        535,
+        50
+      ],
+      [
+        100,
+        746
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "ADFTD",
+    "seed": 41,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        23,
+        0,
+        4961
+      ],
+      [
+        1,
+        1,
+        3174
+      ],
+      [
+        13,
+        0,
+        6475
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "ADFTD",
+    "seed": 42,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        58,
+        0,
+        4926
+      ],
+      [
+        4,
+        6,
+        3166
+      ],
+      [
+        26,
+        4,
+        6458
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "ADFTD",
+    "seed": 43,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        180,
+        4312,
+        492
+      ],
+      [
+        5,
+        2784,
+        387
+      ],
+      [
+        37,
+        5559,
+        892
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "ADFTD",
+    "seed": 44,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        261,
+        4252,
+        471
+      ],
+      [
+        15,
+        2777,
+        384
+      ],
+      [
+        101,
+        5525,
+        862
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "ADFTD",
+    "seed": 45,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        983,
+        74,
+        3927
+      ],
+      [
+        98,
+        185,
+        2893
+      ],
+      [
+        290,
+        197,
+        6001
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "TDBRAIN",
+    "seed": 41,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        445,
+        35
+      ],
+      [
+        410,
+        70
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "TDBRAIN",
+    "seed": 42,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        461,
+        19
+      ],
+      [
+        443,
+        37
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "TDBRAIN",
+    "seed": 43,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        364,
+        116
+      ],
+      [
+        258,
+        222
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "TDBRAIN",
+    "seed": 44,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        466,
+        14
+      ],
+      [
+        445,
+        35
+      ]
+    ]
+  },
+  {
+    "model": "Qwen3-235B-A22B Thinking 2507",
+    "dataset": "TDBRAIN",
+    "seed": 45,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        389,
+        91
+      ],
+      [
+        259,
+        221
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "APAVA",
+    "seed": 41,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        575,
+        10
+      ],
+      [
+        391,
+        455
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "APAVA",
+    "seed": 42,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        362,
+        223
+      ],
+      [
+        174,
+        672
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "APAVA",
+    "seed": 43,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        327,
+        519
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "APAVA",
+    "seed": 44,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        572,
+        13
+      ],
+      [
+        272,
+        574
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "APAVA",
+    "seed": 45,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        429,
+        156
+      ],
+      [
+        168,
+        678
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "ADFTD",
+    "seed": 41,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        196,
+        1128,
+        3660
+      ],
+      [
+        84,
+        585,
+        2507
+      ],
+      [
+        130,
+        1081,
+        5277
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "ADFTD",
+    "seed": 42,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        27,
+        50,
+        4907
+      ],
+      [
+        1,
+        15,
+        3160
+      ],
+      [
+        8,
+        45,
+        6435
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "ADFTD",
+    "seed": 43,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        107,
+        3641,
+        1236
+      ],
+      [
+        77,
+        1534,
+        1565
+      ],
+      [
+        113,
+        3374,
+        3001
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "ADFTD",
+    "seed": 44,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        575,
+        4001,
+        408
+      ],
+      [
+        180,
+        2657,
+        339
+      ],
+      [
+        373,
+        5354,
+        761
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "ADFTD",
+    "seed": 45,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        826,
+        296,
+        3862
+      ],
+      [
+        347,
+        248,
+        2581
+      ],
+      [
+        669,
+        546,
+        5273
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "TDBRAIN",
+    "seed": 41,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        356,
+        124
+      ],
+      [
+        386,
+        94
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "TDBRAIN",
+    "seed": 42,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        12,
+        468
+      ],
+      [
+        29,
+        451
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "TDBRAIN",
+    "seed": 43,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        197,
+        283
+      ],
+      [
+        332,
+        148
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "TDBRAIN",
+    "seed": 44,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        373,
+        107
+      ],
+      [
+        402,
+        78
+      ]
+    ]
+  },
+  {
+    "model": "Gemini 3 Flash Thinking",
+    "dataset": "TDBRAIN",
+    "seed": 45,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        5,
+        475
+      ],
+      [
+        20,
+        460
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "APAVA",
+    "seed": 41,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        582,
+        3
+      ],
+      [
+        271,
+        575
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "APAVA",
+    "seed": 42,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        576,
+        9
+      ],
+      [
+        474,
+        372
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "APAVA",
+    "seed": 43,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        583,
+        2
+      ],
+      [
+        503,
+        343
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "APAVA",
+    "seed": 44,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        585,
+        0
+      ],
+      [
+        524,
+        322
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "APAVA",
+    "seed": 45,
+    "class_order": "[HC, AD]",
+    "confusion": [
+      [
+        552,
+        33
+      ],
+      [
+        508,
+        338
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "ADFTD",
+    "seed": 41,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        1,
+        0,
+        4983
+      ],
+      [
+        0,
+        0,
+        3176
+      ],
+      [
+        1,
+        0,
+        6487
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "ADFTD",
+    "seed": 42,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        394,
+        0,
+        4590
+      ],
+      [
+        108,
+        0,
+        3068
+      ],
+      [
+        278,
+        0,
+        6210
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "ADFTD",
+    "seed": 43,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        348,
+        0,
+        4636
+      ],
+      [
+        45,
+        0,
+        3131
+      ],
+      [
+        155,
+        5,
+        6328
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "ADFTD",
+    "seed": 44,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        0,
+        35,
+        4949
+      ],
+      [
+        0,
+        28,
+        3148
+      ],
+      [
+        0,
+        137,
+        6351
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "ADFTD",
+    "seed": 45,
+    "class_order": "[HC, FTD, AD]",
+    "confusion": [
+      [
+        0,
+        0,
+        4984
+      ],
+      [
+        0,
+        0,
+        3176
+      ],
+      [
+        1,
+        0,
+        6487
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "TDBRAIN",
+    "seed": 41,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        370,
+        110
+      ],
+      [
+        258,
+        222
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "TDBRAIN",
+    "seed": 42,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        60,
+        420
+      ],
+      [
+        352,
+        128
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "TDBRAIN",
+    "seed": 43,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        286,
+        194
+      ],
+      [
+        267,
+        213
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "TDBRAIN",
+    "seed": 44,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        0,
+        480
+      ],
+      [
+        0,
+        480
+      ]
+    ]
+  },
+  {
+    "model": "GLM-5",
+    "dataset": "TDBRAIN",
+    "seed": 45,
+    "class_order": "[HC, PD-indication]",
+    "confusion": [
+      [
+        285,
+        195
+      ],
+      [
+        329,
+        151
+      ]
+    ]
+  }
+]
