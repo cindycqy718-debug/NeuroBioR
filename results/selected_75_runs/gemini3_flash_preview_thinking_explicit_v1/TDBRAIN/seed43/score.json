@@ -1,0 +1,34 @@
+{
+  "schema_version": "neurobiots.medformer_aligned_window.score.v1",
+  "dataset": "TDBRAIN",
+  "split": "TEST",
+  "test_only": true,
+  "formal_comparison_eligible": true,
+  "metrics": {
+    "Accuracy": 0.359375,
+    "Precision": 0.3578941135706736,
+    "Recall": 0.359375,
+    "F1": 0.3577016511114568,
+    "AUROC": 0.2901953125,
+    "AUPRC": 0.384484479769836,
+    "PerClassAUROC": {
+      "0": 0.2901953125,
+      "1": 0.2901953125
+    },
+    "PerClassAUPRC": {
+      "0": 0.36932749646108,
+      "1": 0.399641463078592
+    },
+    "confusion": [
+      [
+        197,
+        283
+      ],
+      [
+        332,
+        148
+      ]
+    ],
+    "sample_count": 960
+  }
+}

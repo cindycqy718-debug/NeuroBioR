@@ -1,0 +1,42 @@
+{
+  "requested_model": "gemini-3-flash-preview-thinking",
+  "dataset": "APAVA",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are the reasoning backbone inside a fixed medical\ntime-series Agent. Compile one deterministic, zero-shot EEG source-cohort\nclassifier for the APAVA research dataset.\n\nInput to your function will be exactly one independently standardized EEG\nwindow shaped [256,16] at 256 Hz. Closed classes: class 0 = healthy_source_cohort, class 1 = alzheimer_source_cohort.\nNo training examples, validation examples, TEST samples, labels, subject IDs,\nMedformer outputs, batch statistics, external files, or network are available.\nUse medically and physiologically justified absolute within-window features\nsuch as band-power composition, spectral shape, temporal variability,\ncomplexity, and cross-channel structure. This is research source-cohort\nclassification, not a clinical diagnosis.\n\nCreate exactly one file: output/predictor.py. It must define\n`predict(window)`, accepting one finite NumPy array shaped [256,16]\nand returning exactly 2 finite nonnegative probabilities\nthat sum to one. Apply one fixed rule to every future row. The function must\nbe deterministic and stateless. It must not read or write files, inspect the\nenvironment, use networking, use randomness, retain history, or access more\nthan the single `window` argument.\n\nAllowed imports are only numpy, scipy, scipy.signal, scipy.stats, and math.\nDo not use open/load/save/memmap/fromfile/tofile, dynamic imports, eval/exec,\nreflection, dunder access, or random functions. Keep the module concise.\nYou may use helper functions and numerical constants.\n\nAxis 0 is always time and axis 1 is always channels. When using Welch,\nperiodogram, FFT, filtering, entropy, correlation, or reductions, set or\nhandle the time axis explicitly; for scipy.signal.welch on the original\nwindow, use axis=0. Never rely on a spectral function's default last axis.\n\nUse one or more <execute> blocks to write the module. Before returning the\nsolution, you MUST create a deterministic synthetic finite array shaped\n[256,16], call predict on it, and assert that the returned vector has\nshape [2], is finite and nonnegative, and sums to one. Use\nPython operations inside <execute>; shell syntax such as cat, heredocs, or\n`python3 <<` is not available. Remove any temporary test artifact and do not\ncreate __pycache__ inside output.\nDo not create any other output file. Then return exactly\n<solution>{\"status\":\"complete\",\"artifact\":\"predictor.py\"}</solution>.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "1` is a very common marker for AD.\n\n    *   Let's consider the `beta` band too.\n    *   `beta_mask = (f >= 13) & (f < 30)`\n    *   `beta_power = np.mean(psd[beta_mask, :])`\n    *   `slowing = (theta_power + delta_power) / (alpha_power + beta_power + 1e-7)`\n    *   For white noise, `delta_power` (3 bins), `theta_power` (4 bins), `alpha_power` (5 bins), `beta_power` (17 bins).\n    *   Wait, `mean()` of the PSD"
+    },
+    {
+      "role": "user",
+      "content": "Use <execute>Python code</execute> or <solution>final JSON</solution>."
+    },
+    {
+      "role": "assistant",
+      "content": "<execute>\nimport os\n\n# Define the predictor content\npredictor_code = \"\"\"\nimport numpy as np\nfrom scipy import signal\n\ndef predict(window):\n    # window shape: [256, 16], fs = 256 Hz\n    # Axis 0 is time, Axis 1 is channels\n    \n    # 1. Spectral Analysis using Welch\n    # nperseg=256 gives 1Hz resolution\n    f, psd = signal.welch(window, fs=256, nperseg=256, axis=0)\n    \n    # Define bands\n    delta_mask = (f >= 1) & (f < 4)\n    theta_mask = ("
+    },
+    {
+      "role": "user",
+      "content": "Use <execute>Python code</execute> or <solution>final JSON</solution>."
+    },
+    {
+      "role": "assistant",
+      "content": "<execute>\nimport os\n\n# Create the output directory if it doesn't exist\nos.makedirs(\"output\", exist_ok=True)\n\npredictor_content = \"\"\"\nimport numpy as np\nfrom scipy import signal\n\ndef predict(window):\n    # window shape: [256, 16], fs = 256 Hz\n    # Axis 0 is time, Axis 1 is channels\n    fs = 256\n    \n    # 1. Spectral Analysis using Welch\n    # nperseg=128 gives 2Hz resolution, which is sufficient for band power\n    f, psd = signal.welch(window, fs=fs, nperseg=128, axis=0)\n    \n    # 2. Extract Band Powers\n    # Delta: 1-4 Hz, Theta: 4-8 Hz, Alpha: 8-13 Hz, Beta: 13-30 Hz\n    delta = np.sum(psd[(f >= 1) & (f < 4), :], axis=0)\n    theta = np.sum(psd[(f >= 4) & (f < 8), :], axis=0)\n    alpha = np.sum(psd[(f >= 8) & (f < 13), :], axis=0)\n    beta = np.sum(psd[(f >= 13) & (f < 30), :], axis=0)\n    \n    # 3. Calculate Features\n    # Total power in the bands of interest\n    total_band_power = delta + theta + alpha + beta + 1e-12\n    \n    # Relative powers averaged across channels\n    rel_theta = np.mean(theta / total_band_power)\n    rel_alpha = np.mean(alpha / total_band_power)\n    \n    # Slowing Ratio: (Delta + Theta) / (Alpha + Beta)\n    # AD is characterized by increased slowing\n    slowing_ratio = np.mean((delta + theta) / (alpha + beta + 1e-12))\n    \n    # Spectral Entropy (Complexity)\n    # Normalize PSD to sum to 1 across frequencies for each channel\n    psd_sum = np.sum(psd, axis=0, keepdims=True) + 1e-12\n    psd_norm = psd / psd_sum\n    # Calculate entropy per channel and average\n    ent = -np.sum(psd_norm * np.log(psd_norm + 1e-12), axis=0)\n    mean_ent = np.mean(ent)\n    \n    # 4. Heuristic Scoring\n    # These coefficients are based on general EEG findings in AD research:\n    # - Higher slowing ratio (slowing_ratio > 1.0 is often a threshold)\n    # - Lower alpha power (rel_alpha < 0.3)\n    # - Higher theta power (rel_theta > 0.2)\n    # - Lower spectral entropy (mean_ent < 3.0)\n    \n    # We construct a logit score for Class 1 (Alzheimer's)\n    score = 0.0\n    score += (slowing_ratio - 1.2) * 2.5\n    score += (0.3 - rel_alpha) * 5.0\n    score += (rel_theta - 0.25) * 3.0\n    score += (3.2 - mean_ent) * 1.5\n    \n    # 5. Convert to Probabilities\n    # Sigmoid function for Class 1 probability\n    p1 = 1.0 / (1.0 + np.exp(-score))\n    p0 = 1.0 - p1\n    \n    return np.array([float(p0), float(p1)], dtype=np.float64)\n\"\"\"\n\nwith open(\"output/predictor.py\", \"w\") as f:\n    f.write(predictor_content.strip())\n\n# Verification\nimport numpy as np\nimport sys\nsys.path.append(\"output\")\nimport predictor\n\n# Create a deterministic synthetic array\nnp.random.seed(42)\ntest_window = np.random.randn(256, 16)\n\n# Call predict\nprobs = predictor.predict(test_window)\n\n# Assertions\nassert probs.shape == (2,), f\"Expected shape (2,), got {probs.shape}\"\nassert np.all(probs >= 0), f\"Probabilities must be nonnegative, got {probs}\"\nassert np.isclose(np.sum(probs), 1.0), f\"Probabilities must sum to 1, got {np.sum(probs)}\"\nassert np.all(np.isfinite(probs)), \"Probabilities must be finite\"\n\nprint(f\"Verification successful. Probs: {probs}\")\n</execute>\n<solution>{\"status\":\"complete\",\"artifact\":\"predictor.py\"}</solution>"
+    },
+    {
+      "role": "user",
+      "content": "Observation:\nVerification successful. Probs: [0.960979 0.039021]\n\nProtocol note: your response contained both <execute> and <solution>. The premature solution was ignored. Inspect the Observation, then return either another <execute> block or a standalone <solution> block."
+    },
+    {
+      "role": "assistant",
+      "content": "<execute>\nimport os\nimport shutil\n\n# Remove __pycache__ if it exists in output/\npycache_path = os.path.join(\"output\", \"__pycache__\")\nif os.path.exists(pycache_path):\n    shutil.rmtree(pycache_path)\n\n# Ensure no other files were created\nfiles = os.listdir(\"output\")\nprint(f\"Files in output: {files}\")\n</execute>\n<solution>{\"status\":\"complete\",\"artifact\":\"predictor.py\"}</solution>"
+    },
+    {
+      "role": "user",
+      "content": "Observation:\nFiles in output: ['predictor.py']\n\nProtocol note: your response contained both <execute> and <solution>. The premature solution was ignored. Inspect the Observation, then return either another <execute> block or a standalone <solution> block."
+    }
+  ]
+}

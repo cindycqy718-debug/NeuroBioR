@@ -1,0 +1,72 @@
+{
+  "schema_version": "neurobiots.medformer_aligned_window.compiled_row_agent.v1",
+  "status": "complete",
+  "formal_comparison_eligible": true,
+  "dataset": "ADFTD",
+  "requested_model": "gemini-3-flash-preview-thinking",
+  "generation_seed": 42,
+  "generation_temperature": 0.2,
+  "returned_model_ids": [
+    "gemini-3-flash-preview"
+  ],
+  "sample_count": 14648,
+  "batch_count": 115,
+  "probability_matrix_path": "${ARTIFACT_ROOT}/results/medformer_aligned_compiled_row_v1_3_0_five_seed/gemini3_flash_preview_thinking_explicit_v1/ADFTD/seed42/probability_matrix.npy",
+  "predictor_audit": {
+    "source_bytes": 2182,
+    "ast_policy": "single_window_no_io_no_random_no_reflection_v1"
+  },
+  "generation_usage": {
+    "input_tokens": 4420,
+    "output_tokens": 15715,
+    "total_tokens": 20135
+  },
+  "generation_cost": {
+    "available": false,
+    "estimated_cost_rmb": null
+  },
+  "score": {
+    "schema_version": "neurobiots.medformer_aligned_window.score.v1",
+    "dataset": "ADFTD",
+    "split": "TEST",
+    "test_only": true,
+    "formal_comparison_eligible": true,
+    "metrics": {
+      "Accuracy": 0.4421764063353359,
+      "Precision": 0.44336517847068113,
+      "Recall": 0.3339904433791882,
+      "F1": 0.21101191054675436,
+      "AUROC": 0.5290678865175013,
+      "AUPRC": 0.3622682311897984,
+      "PerClassAUROC": {
+        "0": 0.5483659257637685,
+        "1": 0.5096502896988924,
+        "2": 0.5291874440898431
+      },
+      "PerClassAUPRC": {
+        "0": 0.4048022285719206,
+        "1": 0.21781132840756942,
+        "2": 0.46419113658990496
+      },
+      "confusion": [
+        [
+          27,
+          50,
+          4907
+        ],
+        [
+          1,
+          15,
+          3160
+        ],
+        [
+          8,
+          45,
+          6435
+        ]
+      ],
+      "sample_count": 14648
+    }
+  },
+  "elapsed_seconds": 579.1879010936245
+}

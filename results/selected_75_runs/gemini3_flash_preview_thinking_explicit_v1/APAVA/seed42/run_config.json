@@ -1,0 +1,67 @@
+{
+  "schema_version": "neurobiots.medformer_aligned_window.compiled_row_agent.v1",
+  "protocol_version": "neurobiots-medformer-aligned-compiled-row-v1.3.0-five-seed",
+  "dataset": "APAVA",
+  "split": "TEST",
+  "test_only": true,
+  "tested_variable": "llm_backbone",
+  "requested_model": "gemini-3-flash-preview-thinking",
+  "generation_seed": 42,
+  "generation_temperature": 0.2,
+  "seed_semantics": "OpenAI-compatible request seed controlling zero-shot Agent predictor synthesis; not a training seed",
+  "returned_model_ids": [
+    "gemini-3-flash-preview"
+  ],
+  "sample_count": 1431,
+  "window_shape": [
+    256,
+    16
+  ],
+  "required_probability_shape": [
+    1431,
+    2
+  ],
+  "predictor_audit": {
+    "source_bytes": 1849,
+    "ast_policy": "single_window_no_io_no_random_no_reflection_v1"
+  },
+  "synthetic_functional_validation": {
+    "passed": true,
+    "test_data_present": false,
+    "probability_shape": [
+      4,
+      2
+    ],
+    "artifact": {
+      "artifact_path": "${ARTIFACT_ROOT}/artifacts/compiled_row_work_v1_3_0_five_seed/gemini3_flash_preview_thinking_explicit_v1/APAVA/seed42/synthetic_functional_validation/output/probabilities.npy",
+      "shape": [
+        4,
+        2
+      ],
+      "source_dtype": "float64"
+    },
+    "probe_artifact": {
+      "artifact_path": "${ARTIFACT_ROOT}/artifacts/compiled_row_work_v1_3_0_five_seed/gemini3_flash_preview_thinking_explicit_v1/APAVA/seed42/synthetic_independence_validation/output/probabilities.npy",
+      "shape": [
+        4,
+        2
+      ],
+      "source_dtype": "float64"
+    },
+    "anchor_probability_max_abs_deviation": 0.0,
+    "identical_rows_max_abs_deviation": 0.0
+  },
+  "generation_provenance": {
+    "mode": "new_llm_generation",
+    "additional_api_calls": 4
+  },
+  "generation_usage": {
+    "input_tokens": 8498,
+    "output_tokens": 9369,
+    "total_tokens": 17867
+  },
+  "generation_cost": {
+    "available": false,
+    "estimated_cost_rmb": null
+  }
+}
