@@ -63,7 +63,7 @@ extract it beside this repository, and run:
 
 ```bash
 python scripts/validate_release.py \
-  --data-root ../NeuroBioR_Aligned_TEST/data
+  --data-root ../NeuroBioR_Aligned_TESTta_v1.1/data
 ```
 
 For the complete command sequence, see [REPRODUCE.md](REPRODUCE.md). A Chinese guide
