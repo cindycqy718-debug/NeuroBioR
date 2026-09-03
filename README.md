@@ -58,24 +58,26 @@ python -m pip install -e ".[test]"
 python -m pytest -q
 ```
 
-Download the companion data archive from the release location recorded in
-`DOWNLOADS.md`, extract it beside this repository, and run:
+Download the fixed aligned TEST archive from the location recorded in `DOWNLOADS.md`,
+extract it beside this repository, and run:
 
 ```bash
 python scripts/validate_release.py \
-  --data-root ../NeuroBioR_Aligned_TEST_Data_v1.1/data
+  --data-root ../NeuroBioR_Aligned_TEST/data
 ```
 
 For the complete command sequence, see [REPRODUCE.md](REPRODUCE.md). A Chinese guide
 is available at [docs/REPRODUCTION_GUIDE_CN.md](docs/REPRODUCTION_GUIDE_CN.md).
 
-## Scope of the companion data archive
+## Scope of the companion data archives
 
-The archive contains complete aligned TEST packs for APAVA and ADFTD. TDBRAIN is
-access-controlled and therefore is not redistributed. Its retained predictors,
-probability matrices, scores, and paper-table rows are included here; an independently
-obtained authorized TDBRAIN copy is required for signal-level replay. See
-`docs/DATA_ACCESS.md` for the exact boundary.
+The fixed aligned TEST archive supports direct validation, re-scoring, and predictor
+replay for APAVA and ADFTD. A second archive contains the complete processed APAVA and
+ADFTD subject arrays and labels across the Medformer training, validation, and test
+splits. TDBRAIN is access-controlled and therefore is not redistributed. Its retained
+predictors, probability matrices, scores, and paper-table rows are included here; an
+independently obtained authorized TDBRAIN copy is required for signal-level replay.
+See `DOWNLOADS.md` and `docs/DATA_ACCESS.md` for the exact boundary.
 
 ## Main retained model rows
 
