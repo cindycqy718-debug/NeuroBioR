@@ -1,0 +1,43 @@
+{
+  "schema_version": "neurobiots.medformer_aligned_window.score.v1",
+  "dataset": "ADFTD",
+  "split": "TEST",
+  "test_only": true,
+  "formal_comparison_eligible": true,
+  "metrics": {
+    "Accuracy": 0.2550518842162753,
+    "Precision": 0.20615550020834728,
+    "Recall": 0.3032769403903713,
+    "F1": 0.20589730908434442,
+    "AUROC": 0.47988713018916923,
+    "AUPRC": 0.3266956224159404,
+    "PerClassAUROC": {
+      "0": 0.5,
+      "1": 0.4492644888968519,
+      "2": 0.4903969016706559
+    },
+    "PerClassAUPRC": {
+      "0": 0.3402512288367013,
+      "1": 0.2014568278328044,
+      "2": 0.4383788105783155
+    },
+    "confusion": [
+      [
+        0,
+        3840,
+        1144
+      ],
+      [
+        0,
+        2078,
+        1098
+      ],
+      [
+        0,
+        4830,
+        1658
+      ]
+    ],
+    "sample_count": 14648
+  }
+}
